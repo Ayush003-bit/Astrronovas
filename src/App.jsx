@@ -1,6 +1,9 @@
 
-
+import React from "react"
+import { Routes, Route } from 'react-router-dom'
 import HomePage from './Pages/Home'
+import Courses from "./Pages/Courses"
+import CourseList from "./Pages/CourseList"
 import './App.css'
 
 function App() {
@@ -9,7 +12,16 @@ function App() {
   return (
     <>
 
-    <HomePage/>
+      <Routes>
+
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/courses" element={<Courses/>} />
+        <Route path="/course-list" element={<CourseList/>} />
+
+
+
+      </Routes>
+
      
     </>
   )

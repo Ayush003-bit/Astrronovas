@@ -2,7 +2,7 @@
 import React, { useState } from "react"
 import Logo from "../assets/Images/AstroLogo.png"
 import Cloud from '../assets/Images/C1.png'
-import Moon from "../assets/Images/moon.png"
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -11,6 +11,8 @@ export function Header() {
    const [split, setSplit] = useState(false);
    const [islogo, setIsLogo] = useState(true);
    const [showContent, setShowContent] = useState(false);
+
+   const navigate = useNavigate();
 
   // const handleEvent = () => {
   //    setSplit(true)
@@ -64,7 +66,7 @@ export function Header() {
 
       <div className="buttons">
         <button className="btn1">Shopping</button>
-        <button className="btn2">Courses</button>
+        <button onClick={()=> navigate("/courses")} className="btn2">Courses</button>
       </div>
     </div>
   )
